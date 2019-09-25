@@ -1,0 +1,20 @@
+<script src="https://unpkg.com/vue/dist/vue.js"></script>
+
+<div id="app">
+    <input type="text" v-on:input="alterarTitulo">
+    <p>{{ title }}</p>
+</div>
+
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            title: 'Hello World!'
+        },
+        methods: {
+            alterarTitulo(event) {
+                this.titulo = event.target.value
+            }
+        }
+    });
+</script>
