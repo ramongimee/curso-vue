@@ -1,19 +1,19 @@
 <script src="https://unpkg.com/vue/dist/vue.js"></script>
 
 <div id="app">
-    <p>{{ titulo }}</p>
-    <p>{{ saudacao() }}</p>
+    <p>{{ contador }}</p>
+    <button v-on:click="somar">Somar 1</button>
 </div>
 
 <script>
     new Vue({
         el: '#app',
         data: {
-            titulo: 'Usando VueJS!'
+            contador: 0
         },
-        methods: {
-            saudacao: function() {
-                return 'Boa semana!'
+        methods: {  
+            somar() {
+                this.contador++
             }
         }
     })
